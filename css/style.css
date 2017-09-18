@@ -1,0 +1,11 @@
+html,body {
+    margin:0;
+    padding: 0;
+}
+
+.map {
+    margin: 100px auto;
+    text-align: center;
+    background-color: pink;
+    position: relative;
+}
