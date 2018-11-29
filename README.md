@@ -1,7 +1,7 @@
 ## 一、简单介绍
 
 ### 1.1 效果展示
-![](http://ow97db1io.bkt.clouddn.com/snake-1.gif) 
+![](http://images.extlight.com/snake-1.gif) 
  
 ### 1.2 实现思路
 
@@ -10,12 +10,13 @@
 * 蛇：创建一个二维数组充当蛇；二维数组存放蛇节（3个蛇身和1个蛇头），一维数组存放蛇节的位置、颜色和下一个蛇节对象。
 * 蛇移动：先移动蛇尾，再移动蛇头。当前移动的蛇节位置为下一个蛇节未移动时的位置。
 
-### 1.3 设计技术点
+### 1.3 涉及技术
 DOM操作、面向对象、事件操作和间隔函数setInterval
     
+<!-- more -->
 
 ### 1.4 项目结构
-![](http://ow97db1io.bkt.clouddn.com/snake-2.jpg)
+![](http://images.extlight.com/snake-2.jpg)
     
 ## 二、实现步骤
 
@@ -101,7 +102,7 @@ Game.prototype.start = function() {
 ```
 
 #### 2.1.5 效果
-![](http://ow97db1io.bkt.clouddn.com/snake-3.jpg)   
+![](http://images.extlight.com/snake-3.jpg)   
 
 ### 2.2 绘制食物
 #### 2.2.1 food.js 文件
@@ -155,7 +156,7 @@ Game.prototype.start = function() {
 ```
 
 #### 2.2.3 效果
-![](http://ow97db1io.bkt.clouddn.com/snake-4.jpg)
+![](http://images.extlight.com/snake-4.jpg)
 
 ### 2.3 绘制小蛇
 
@@ -216,7 +217,7 @@ Game.prototype.start = function() {
 }
 ```
 #### 2.3.3 效果
-![](http://ow97db1io.bkt.clouddn.com/snake-5.jpg)
+![](http://images.extlight.com/snake-5.jpg)
 
 ### 2.4 小蛇移动
 #### 2.4.1 snake.js 文件，添加move方法
@@ -278,7 +279,7 @@ Game.prototype.start = function() {
 
 
 ### 2.5 控制小蛇移动方向
-#### 2.5.1 game.js 添加键盘按下事件
+game.js 添加键盘按下事件
 
 ``` javascript
 var Game = function() {
@@ -321,7 +322,7 @@ Game.prototype.start = function() {
 ```
 
 ### 2.6 小蛇吃食物
-#### 2.6.1 snake.js 文件在 move 方法   this.showSnake() 之前添加逻辑判断
+snake.js 文件在 move 方法   this.showSnake() 之前添加逻辑判断
 
 ``` javascript
 // 蛇头坐标
@@ -339,7 +340,7 @@ if (xSnakeHead == this.food.xFood && ySnakeHead == this.food.yFood) {
 ```
 
 ### 2.7 小蛇移动范围
-#### 2.7.1 snake.js 文件在 move 方法   this.showSnake() 之前添加逻辑判断
+snake.js 文件在 move 方法   this.showSnake() 之前添加逻辑判断
 
 ``` javascript
 // 控制小蛇移动范围
@@ -361,4 +362,4 @@ for (var j=0; j<this.snakeBody.length -1; j++) {
 
 ## 三、源码下载
 
-[贪吃蛇](https://github.com/moonlightL/snake)
+[贪吃蛇下载](https://github.com/moonlightL/snake)
