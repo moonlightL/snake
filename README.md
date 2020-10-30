@@ -1,7 +1,7 @@
 ## 一、简单介绍
 
 ### 1.1 效果展示
-![](http://images.extlight.com/snake-1.gif) 
+![](https://images.extlight.com/snake-1.gif) 
  
 ### 1.2 实现思路
 
@@ -16,7 +16,7 @@ DOM操作、面向对象、事件操作和间隔函数setInterval
 <!-- more -->
 
 ### 1.4 项目结构
-![](http://images.extlight.com/snake-2.jpg)
+![](https://images.extlight.com/snake-2.jpg)
     
 ## 二、实现步骤
 
@@ -102,7 +102,7 @@ Game.prototype.start = function() {
 ```
 
 #### 2.1.5 效果
-![](http://images.extlight.com/snake-3.jpg)   
+![](https://images.extlight.com/snake-3.jpg)   
 
 ### 2.2 绘制食物
 #### 2.2.1 food.js 文件
@@ -156,7 +156,7 @@ Game.prototype.start = function() {
 ```
 
 #### 2.2.3 效果
-![](http://images.extlight.com/snake-4.jpg)
+![](https://images.extlight.com/snake-4.jpg)
 
 ### 2.3 绘制小蛇
 
@@ -217,7 +217,7 @@ Game.prototype.start = function() {
 }
 ```
 #### 2.3.3 效果
-![](http://images.extlight.com/snake-5.jpg)
+![](https://images.extlight.com/snake-5.jpg)
 
 ### 2.4 小蛇移动
 #### 2.4.1 snake.js 文件，添加move方法
