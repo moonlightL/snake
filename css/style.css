@@ -3,8 +3,18 @@ html,body {
     padding: 0;
 }
 
+.info {
+    position: relative;
+    margin: 20px auto;
+    width: 800px;
+}
+
+.info .start-btn {
+    float: right;
+}
+
 .map {
-    margin: 100px auto;
+    margin: 50px auto;
     text-align: center;
     background-color: pink;
     position: relative;

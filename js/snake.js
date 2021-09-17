@@ -1,4 +1,4 @@
-var Snake = function(food) {
+var Snake = function(food, scoreDiv) {
     this.size = 20;
     // 初始化蛇{x坐标，y坐标，颜色，蛇节对象}
     this.snakeBody = [
@@ -9,6 +9,7 @@ var Snake = function(food) {
     ];
     this.direction = "right"; // 蛇移动方向
     this.food = food; //食物
+    this.scoreDiv = scoreDiv;
 }
 
 // 显示蛇
@@ -28,12 +29,11 @@ Snake.prototype.showSnake = function() {
         // 设置蛇在地图中的位置
         this.snakeBody[i].obj.style.left = this.snakeBody[i].x * this.size + "px";
         this.snakeBody[i].obj.style.top = this.snakeBody[i].y * this.size + "px";
-
     }
 }
 
 // 移动蛇
-Snake.prototype.move = function() {
+Snake.prototype.move = function(timeId) {
     // 非蛇头蛇节（当前蛇节的新坐标 为 下个蛇节的旧坐标）
     for (var i=0; i<this.snakeBody.length -1; i++) {
         this.snakeBody[i].x = this.snakeBody[i+1].x;
@@ -69,11 +69,13 @@ Snake.prototype.move = function() {
         this.snakeBody.unshift(newBody);
         // 食物消失，再随机生成
         this.food.showFood();
+        this.scoreDiv.innerHTML =  parseInt(this.scoreDiv.innerHTML) + 1;
     }
 
     // 控制小蛇移动范围
     if (xSnakeHead < 0 || xSnakeHead >= this.food.map.width/this.size
         || ySnakeHead <0 || ySnakeHead >= this.food.map.height/this.size) {
+        clearInterval(timeId);
         alert("游戏结束!");
         window.location.reload();
     }
@@ -82,6 +84,7 @@ Snake.prototype.move = function() {
     for (var j=0; j<this.snakeBody.length -1; j++) {
         // 蛇头坐标 = 蛇身坐标，游戏结束
         if (this.snakeBody[j].x == xSnakeHead && this.snakeBody[j].y == ySnakeHead) {
+            clearInterval(timeId);
             alert("游戏结束!");
             window.location.reload();
         }
